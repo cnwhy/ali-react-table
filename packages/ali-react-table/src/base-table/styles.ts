@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const LOCK_SHADOW_PADDING = 20
 
-const prefix = 'art-'
+const prefix = 'x-ali-'
 
 export const Classes = {
   /** BaseTable 表格组件的外层包裹 div */
