@@ -123,7 +123,7 @@ export function rowDetail(opts: RowDetailFeatureOptions = {}) {
       .columns(processColumns(pipeline.getColumns()))
       .appendRowPropsGetter((row) => {
         if (row[rowDetailMetaKey]) {
-          return { className: 'no-hover' }
+          return { className: 'no-hover' } as React.HTMLAttributes<HTMLTableRowElement>
         }
       })
 
@@ -182,6 +182,8 @@ export function rowDetail(opts: RowDetailFeatureOptions = {}) {
               style: {
                 '--cell-padding': '0',
                 overflow: 'hidden',
+                position: 'relative',
+                zIndex: 21,
                 ...opts.detailCellStyle,
               } as any,
             }
